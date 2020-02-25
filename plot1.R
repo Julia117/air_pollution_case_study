@@ -9,7 +9,7 @@ sum1 <- sum(pm1$Emissions)
 sum2 <- sum(pm2$Emissions)
 sum3 <- sum(pm3$Emissions)
 
-rng <- range(sum3, sum0, na.rm = T)
+rng <- range(sum3, sum0)
 
 png(file = "plot1.png", bg="white")
 

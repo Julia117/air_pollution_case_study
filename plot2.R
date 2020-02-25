@@ -2,9 +2,8 @@ NEI <- readRDS("./exdata_data_NEI_data/summarySCC_PM25.rds")
 bltmr <- subset(NEI, fips == "24510")
 
 sum0 <- sum(subset(bltmr, year == 1999)$Emissions)
-
 sum3 <- sum(subset(bltmr, year == 2008)$Emissions)
-rng <- range(sum3, sum0, na.rm = T)
+rng <- range(sum3, sum0)
 
 png(file = "plot2.png", bg="white")
 
