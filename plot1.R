@@ -10,9 +10,13 @@ sum2 <- sum(pm2$Emissions)
 sum3 <- sum(pm3$Emissions)
 
 rng <- range(sum3, sum0, na.rm = T)
+
+png(file = "plot1.png", bg="white")
+
 with(pm0, plot(1999, sum0, xlim = c(1998, 2009), ylim = rng, pch = 20, xlab = "Year", 
                ylab = "Total emissions, tons"))
 with(pm1, points(2002, sum1, xlim = c(1998, 2009), ylim = rng, pch = 20))
 with(pm1, points(2005, sum2, xlim = c(1998, 2009), ylim = rng, pch = 20))
 with(pm1, points(2008, sum3, xlim = c(1998, 2009), ylim = rng, pch = 20))
 lines(c(1999, 2002, 2005, 2008),c(sum0, sum1, sum2, sum3))
+dev.off()
