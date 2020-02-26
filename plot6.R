@@ -4,7 +4,7 @@ SCC <- readRDS("./exdata_data_NEI_data/Source_Classification_Code.rds")
 mv <- unique(subset(SCC, grepl("Motor", Short.Name), c(SCC, Short.Name)))
 all_motors <- subset(NEI, SCC %in% mv$SCC)
 sum0_b <- sum(subset(all_coal, year == 1999 & fips == "24510")$Emissions)
-sum1_b <- sum(subset(all_coal, year == 2008 & fips == "24510")$Emissions)
+sum1_b <- sum(subset(all_coal, year == 2008 & fips == "24510")$Emissions) 
 
 sum0_c <- sum(subset(all_coal, year == 1999 & fips == "06037")$Emissions)
 sum1_c <- sum(subset(all_coal, year == 2008 & fips == "06037")$Emissions)

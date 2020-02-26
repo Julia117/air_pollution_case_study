@@ -12,7 +12,7 @@ png(file = "plot5.png", bg="white")
 
 
 with(all_motors, plot(1999, sum0, xlim = c(1998, 2009), ylim = rng, pch = 20, xlab = "Year", 
-                    ylab = "Total emission from coal, tons"))
+                    ylab = "Total emission from coal in Baltimore, tons"))
 
 with(all_motors, points(2008, sum1, xlim = c(1998, 2009), ylim = rng, pch = 20))
 lines(c(1999, 2008),c(sum0, sum1))
